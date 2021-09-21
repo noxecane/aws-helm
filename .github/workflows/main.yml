@@ -1,5 +1,7 @@
 name: Build and push image
 
+on: push
+
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
