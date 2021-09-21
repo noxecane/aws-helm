@@ -1,10 +1,9 @@
-DOCKER_IMAGE ?= noxecane/aws-helm:tagname
-GIT_BRANCH ?= `git rev-parse --abbrev-ref HEAD`
+DOCKER_IMAGE ?= noxecane/aws-helm
 
-ifeq ($(GIT_BRANCH), master)
+ifeq ($(REPOSITORY_NAME), master)
 	DOCKER_TAG = latest
 else
-	DOCKER_TAG = $(GIT_BRANCH)
+	DOCKER_TAG = $(REPOSITORY_NAME)
 endif
 
 build:
