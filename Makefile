@@ -1,6 +1,3 @@
-
-default: docker_build
-
 DOCKER_IMAGE ?= noxecane/aws-helm:tagname
 GIT_BRANCH ?= `git rev-parse --abbrev-ref HEAD`
 
