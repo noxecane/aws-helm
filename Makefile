@@ -1,9 +1,9 @@
 DOCKER_IMAGE ?= noxecane/aws-helm
 
-ifeq ($(REPOSITORY_NAME), master)
+ifeq ($(REPOSITORY_BRANCH), master)
 	DOCKER_TAG = latest
 else
-	DOCKER_TAG = $(REPOSITORY_NAME)
+	DOCKER_TAG = $(REPOSITORY_BRANCH)
 endif
 
 build:
